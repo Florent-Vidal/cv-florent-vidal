@@ -6,7 +6,15 @@
   font-display: swap;
 }
 
-/* Variables */
+@font-face {
+  font-family: "Mozilla text";
+  src: url("../font/MozillaText-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* VARIABLES */
 :root {
   --bleu: rgb(23, 171, 179);
   --noir: rgb(51, 51, 51);
@@ -21,16 +29,15 @@
 }
 
 p {
-  font-family: "Raleway";
   font-weight: 400;
   margin: 0;
   padding: 0;
 }
 
 body {
+  font-family: "Wix Madefor Display";
   max-width: 1160px;
   margin: 0 auto;
-  font-family: "Lato";
 }
 
 main {
@@ -40,30 +47,30 @@ main {
 aside {
   width: 30%;
   background-color: var(--gris-2);
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-top: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
 }
 
 section {
   width: 70%;
   background-color: var(--blanc);
-  padding-left: 3rem;
-  padding-right: 3rem;
-  margin-bottom: 5rem;
-  padding-top: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: 3rem;
+  padding-top: 2rem;
 }
 
 h2 {
-  font-family: "Lato";
+  font-family: "Mozilla text";
   font-weight: 400;
   color: var(--bleu);
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 
 h3 {
-  font-family: "Lato";
+  font-family: "Mozilla text";
   font-weight: 600;
   font-size: 1rem;
   margin: 0;
@@ -81,7 +88,7 @@ header {
 }
 
 h1 {
-  font-family: "Lato";
+  font-family: "Wix Madefor Display";
   margin-top: 1rem;
   margin-bottom: 0;
   font-size: 3.4rem;
@@ -89,7 +96,7 @@ h1 {
 
 header h2 {
   color: var(--blanc);
-  font-family: "Lato";
+  font-family: "Wix Madefor Display";
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 0;
@@ -117,6 +124,7 @@ header h2 {
   width: 20px;
   height: 20px;
   vertical-align: middle;
+  color: var(--blanc);
 }
 
 address {
@@ -130,7 +138,7 @@ address {
 address a {
   color: var(--blanc);
   text-decoration: none;
-  font-family: "Raleway";
+  font-family: "Wix Madefor Display";
   margin-bottom: 0.5rem;
   margin-top: 0;
   vertical-align: bottom;
@@ -141,13 +149,16 @@ address a {
   flex-direction: column;
 }
 
-/* ASIDE*/
-.separateur-aside {
+.separateur {
   height: 2px;
   width: 100%;
-  background-color: var(--gris-1);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: transparent;
+  border-top: 1px solid var(--gris-1);
+  height: 0;
 }
+
+/* ASIDE */
 
 .article-aside {
   margin-bottom: 2rem;
@@ -196,21 +207,10 @@ i {
 }
 
 .bold {
-  font-family: "Raleway-Bold";
+  font-family: "Mozilla text";
 }
 
 /* SECTION */
-.separateur-section {
-  height: 2px;
-  width: 100%;
-  background-color: var(--gris-1);
-  margin-bottom: 1rem;
-}
-
-.indent {
-  text-align: justify;
-  text-indent: 2rem;
-}
 
 .list-section {
   list-style: none;
@@ -235,13 +235,13 @@ i {
 }
 
 .list-section p {
-  font-family: "Raleway-Italic";
+  font-family: "Mozilla text";
   color: var(--noir);
   font-size: 0.7rem;
 }
 
 .date {
-  font-family: "Raleway";
+  font-family: "Mozilla text";
   color: var(--bleu);
   white-space: nowrap;
   align-self: center;
@@ -251,14 +251,13 @@ i {
 footer {
   display: flex;
   flex-direction: column;
-  background-color: var(--bleu);
   color: var(--blanc);
   padding-top: 0;
   padding-bottom: 0;
 }
 
 footer time {
-  font-family: "Raleway-Italic";
+  font-family: "Mozilla text";
   font-weight: 300;
   opacity: 90%;
   display: flex;
@@ -274,12 +273,86 @@ footer img {
   height: 30px;
 }
 
-footer img:hover {
-  opacity: 50%;
-}
-
 .footer {
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+@media print {
+  body {
+    max-width: 100%;
+    font-size: 0.85rem;
+  }
+
+  aside,
+  section {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+main {
+  flex-direction: row;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+.icon {
+  color: var(--noir);
+}
+
+header h1,
+header h2 {
+  color: var(--noir);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+address {
+  color: var(--noir);
+}
+
+address {
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+address a {
+  color: var(--noir);
+}
+
+aside {
+  width: 40%;
+}
+
+section {
+  width: 60%;
+}
+
+section {
+  margin-bottom: 0;
+}
+
+aside {
+  background-color: var(--blanc);
+}
+
+footer {
+  background-color: var(--blanc);
+  color: var(--noir);
+}
+
+footer time {
+  color: var(--noir);
 }
