@@ -23,7 +23,7 @@
   --blanc: rgb(255, 255, 255);
 }
 
-/* GLOBAL*/
+/* GLOBAL */
 * {
   box-sizing: border-box;
 }
@@ -40,8 +40,32 @@ body {
   margin: 0 auto;
 }
 
+@media print {
+  body {
+    max-width: 100%;
+    font-size: 0.85rem;
+  }
+}
+
 main {
   display: flex;
+}
+
+@media (max-width: 768px) {
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  header {
+    text-align: center;
+  }
+}
+
+@media print {
+  main {
+    flex-direction: row;
+  }
 }
 
 aside {
@@ -52,6 +76,22 @@ aside {
   padding-top: 2rem;
 }
 
+@media (max-width: 768px) {
+  aside {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media print {
+  aside {
+    width: 40%;
+    background-color: var(--blanc);
+    padding: 1rem 1.5rem;
+  }
+}
+
 section {
   width: 70%;
   background-color: var(--blanc);
@@ -59,6 +99,22 @@ section {
   padding-right: 2rem;
   margin-bottom: 3rem;
   padding-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  section {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media print {
+  section {
+    width: 60%;
+    margin-bottom: 0;
+    padding: 1rem 1.5rem;
+  }
 }
 
 h2 {
@@ -87,11 +143,28 @@ header {
   padding-bottom: 1rem;
 }
 
+@media print {
+  header {
+    justify-content: space-around;
+    gap: 2rem;
+    background-color: var(--blanc);
+    color: var(--bleu);
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
 h1 {
   font-family: "Wix Madefor Display";
   margin-top: 1rem;
   margin-bottom: 0;
   font-size: 3.4rem;
+}
+
+@media print {
+  h1 {
+    font-size: 2.2rem;
+  }
 }
 
 header h2 {
@@ -100,6 +173,12 @@ header h2 {
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+@media print {
+  header h2 {
+    color: var(--bleu);
+  }
 }
 
 .photo-profil {
@@ -113,18 +192,31 @@ header h2 {
   cursor: zoom-in;
 }
 
+@media print {
+  .photo-profil {
+    max-width: 100px;
+    max-height: 100px;
+    border-color: var(--gris-1);
+  }
+}
+
 .header-right {
-  flex-basis: 53%;
+  flex-basis: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   vertical-align: middle;
-  color: var(--blanc);
+}
+
+@media print {
+  .icon {
+    filter: invert(1);
+  }
 }
 
 address {
@@ -133,6 +225,13 @@ address {
   gap: 3.5rem;
   margin-top: 2rem;
   margin-bottom: 0;
+}
+
+@media print {
+  address {
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
 }
 
 address a {
@@ -144,29 +243,44 @@ address a {
   vertical-align: bottom;
 }
 
+@media print {
+  address a {
+    color: var(--bleu);
+  }
+}
+
 .address-header {
   display: flex;
   flex-direction: column;
 }
 
 .separateur {
-  height: 2px;
-  width: 100%;
+  height: 0;
+  width: 50%;
   margin-bottom: 0.5rem;
   background-color: transparent;
   border-top: 1px solid var(--gris-1);
-  height: 0;
 }
 
 /* ASIDE */
-
 .article-aside {
   margin-bottom: 2rem;
+}
+
+@media print {
+  .article-aside {
+    margin-bottom: 1rem;
+  }
 }
 
 i {
   color: var(--bleu);
   font-size: 0.8rem;
+}
+
+.skills {
+  margin: 0;
+  padding: 0;
 }
 
 .skills li {
@@ -178,7 +292,7 @@ i {
   margin: 0;
 }
 
-.skills {
+.liste-langues {
   margin: 0;
   padding: 0;
 }
@@ -189,11 +303,6 @@ i {
   align-items: center;
   padding-bottom: 0.5rem;
   list-style: none;
-}
-
-.liste-langues {
-  margin: 0;
-  padding: 0;
 }
 
 .liste-aside {
@@ -211,7 +320,6 @@ i {
 }
 
 /* SECTION */
-
 .list-section {
   list-style: none;
   margin: 0;
@@ -234,6 +342,15 @@ i {
   margin-right: 0.5rem;
 }
 
+@media print {
+  .list-section li {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    margin-bottom: 0.2rem;
+    break-inside: avoid;
+  }
+}
+
 .list-section p {
   font-family: "Mozilla text";
   color: var(--noir);
@@ -251,9 +368,17 @@ i {
 footer {
   display: flex;
   flex-direction: column;
+  background-color: var(--bleu);
   color: var(--blanc);
   padding-top: 0;
   padding-bottom: 0;
+}
+
+@media print {
+  footer {
+    background-color: var(--blanc);
+    color: var(--noir);
+  }
 }
 
 footer time {
@@ -264,6 +389,12 @@ footer time {
   justify-content: center;
   margin-bottom: 1rem;
   font-size: 0.8rem;
+}
+
+@media print {
+  footer time {
+    color: var(--noir);
+  }
 }
 
 footer img {
@@ -279,80 +410,20 @@ footer img {
   gap: 1rem;
 }
 
-/* MEDIA QUERIES */
-@media (max-width: 768px) {
-  main {
-    flex-direction: column;
-  }
-}
-
+/* LIENS EXTERNES A L'IMPRESSION */
 @media print {
-  body {
-    max-width: 100%;
-    font-size: 0.85rem;
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.7rem;
+    color: var(--noir);
   }
 
-  aside,
-  section {
-    width: 100%;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  article {
+    break-inside: avoid;
   }
-}
 
-main {
-  flex-direction: row;
-}
-
-h1 {
-  font-size: 2.2rem;
-}
-
-.icon {
-  color: var(--noir);
-}
-
-header h1,
-header h2 {
-  color: var(--noir);
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-address {
-  color: var(--noir);
-}
-
-address {
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-address a {
-  color: var(--noir);
-}
-
-aside {
-  width: 40%;
-}
-
-section {
-  width: 60%;
-}
-
-section {
-  margin-bottom: 0;
-}
-
-aside {
-  background-color: var(--blanc);
-}
-
-footer {
-  background-color: var(--blanc);
-  color: var(--noir);
-}
-
-footer time {
-  color: var(--noir);
+  @page {
+    size: A4;
+    margin: 1cm;
+  }
 }
