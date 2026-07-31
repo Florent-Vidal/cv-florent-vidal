@@ -47,6 +47,14 @@ body {
   }
 }
 
+.separateur {
+  height: 0;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  background-color: transparent;
+  border-top: 1px solid var(--gris-1);
+}
+
 main {
   display: flex;
 }
@@ -253,14 +261,6 @@ address a {
 .address-header {
   display: flex;
   flex-direction: column;
-}
-
-.separateur {
-  height: 0;
-  width: 50%;
-  margin-bottom: 0.5rem;
-  background-color: transparent;
-  border-top: 1px solid var(--gris-1);
 }
 
 /* ASIDE */
