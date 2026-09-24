@@ -34,9 +34,13 @@
           </div>
 
           <div class="address-header">
-            <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.google.fr/maps?q=B%C3%A9ziers"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="./assets/icons/house.svg" alt="" class="icon" />
-              Beziers 34
+              Béziers 34
             </a>
 
             <p>
@@ -79,17 +83,6 @@
 
             <li>
               <span class="bold">Javascript</span>
-              <span aria-label="Niveau de compétence : 2 étoiles sur 5">
-                <img src="./assets/icons/star-solid-full.svg" alt="" class="star-icon" />
-                <img src="./assets/icons/star-solid-full.svg" alt="" class="star-icon" />
-                <img src="./assets/icons/star-regular-empty.svg" alt="" class="star-icon" />
-                <img src="./assets/icons/star-regular-empty.svg" alt="" class="star-icon" />
-                <img src="./assets/icons/star-regular-empty.svg" alt="" class="star-icon" />
-              </span>
-            </li>
-
-            <li>
-              <span class="bold">TypeScript</span>
               <span aria-label="Niveau de compétence : 2 étoiles sur 5">
                 <img src="./assets/icons/star-solid-full.svg" alt="" class="star-icon" />
                 <img src="./assets/icons/star-solid-full.svg" alt="" class="star-icon" />
@@ -164,6 +157,17 @@
                 <img src="./assets/icons/star-regular-empty.svg" alt="" class="star-icon" />
               </span>
             </li>
+
+            <li>
+              <span class="bold">MongoDB</span>
+              <span aria-label="Niveau de compétence : 2 étoiles sur 5">
+                <img src="./assets/icons/star-solid-full.svg" alt="" class="star-icon" />
+                <img src="./assets/icons/star-solid-full.svg" alt="" class="star-icon" />
+                <img src="./assets/icons/star-regular-empty.svg" alt="" class="star-icon" />
+                <img src="./assets/icons/star-regular-empty.svg" alt="" class="star-icon" />
+                <img src="./assets/icons/star-regular-empty.svg" alt="" class="star-icon" />
+              </span>
+            </li>
           </ul>
         </article>
 
@@ -215,24 +219,71 @@
         <h2>Profil</h2>
         <div class="separateur"></div>
         <p>
-          En formation Développeur Web et Web Mobile, je construis des applications complètes avec
-          React, Node.js et MySQL — de la conception de base de données à l'interface utilisateur.
-          Reconverti après plusieurs années dans d'autres secteurs, j'apporte une rigueur et une
-          capacité de travail forgées par mon parcours, appliquées aujourd'hui à la résolution de
-          problèmes techniques. Curieux de nature, je m'intéresse à l'ensemble de l'écosystème tech,
-          et je cherche un stage où contribuer concrètement à des projets tout en continuant à
-          progresser.
+          Après plusieurs années en boulangerie-pâtisserie et dans l'Armée de Terre, je me suis
+          reconverti dans le développement web. J'ai terminé en 2026 ma formation Développeur Web et
+          Web Mobile au Centre Européen de Formation et je prépare le titre professionnel associé.
+          Je conçois des applications complètes, de la base de données à l'interface : React côté
+          client, Node.js et Express côté serveur, MySQL ou MongoDB pour les données. De mes métiers
+          précédents, je garde la rigueur, le souci du détail et l'habitude de tenir les délais. Je
+          cherche aujourd'hui un stage pour contribuer à des projets concrets au sein d'une équipe
+          et continuer à progresser.
         </p>
 
         <article>
-  <h2>Projets</h2>
-  <div class="separateur"></div>
-  <p>
-    Projets en cours de finalisation, bientôt disponibles ici.
-    Retrouvez dès maintenant mon travail sur
-    <a href="https://github.com/Florent-Vidal" target="_blank" rel="noopener noreferrer">GitHub</a>.
-  </p>
-</article>
+          <h2>Projets</h2>
+          <div class="separateur"></div>
+          <ul class="list-section">
+            <li>
+              <div>
+                <h3>Trouve ton artisan</h3>
+                <p>
+                  Annuaire d'artisans de la région Auvergne-Rhône-Alpes : recherche par catégorie ou
+                  par nom, fiche détaillée, contact par e-mail.
+                </p>
+                <p><strong>React · Node.js · Express · Sequelize · MySQL</strong></p>
+                <a
+                  href="https://github.com/Florent-Vidal/trouve-ton-artisan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Voir le code sur GitHub</a
+                >
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <h3>Port de Plaisance Russell</h3>
+                <p>
+                  Gestion d'un port de plaisance : catways, réservations et comptes de l'équipe.
+                </p>
+                <p><strong>Node.js, Express, MongoDB, JWT, EJS</strong></p>
+                <a
+                  href="https://github.com/Florent-Vidal/port-plaisance-russell"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Voir le code sur GitHub</a
+                >
+              </div>
+            </li>
+
+            <li>
+              <div>
+                <h3>Touche Pas Au Klaxon</h3>
+                <p>
+                  Covoiturage entre les sites d'une entreprise : proposer et réserver des trajets
+                  entre agences.
+                </p>
+                <p><strong>PHP 8, architecture MVC sans framework, MySQL, Bootstrap</strong></p>
+                <a
+                  href="https://github.com/Florent-Vidal/touche-pas-au-klaxon"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Voir le code sur GitHub</a
+                >
+              </div>
+            </li>
+          </ul>
+        </article>
 
         <article>
           <h2>Formations</h2>
@@ -241,10 +292,10 @@
           <ul class="list-section">
             <li>
               <div>
-                <h3>Certificat d'aptitude professionnelle Boulangerie</h3>
-                <p>Centre de formation d'apprentis Nicolas Albano à Sète</p>
+                <h3>Développeur Web et Web Mobile</h3>
+                <p>Centre Européen de Formation (à distance)</p>
               </div>
-              <time class="date" datetime="2015">2015 - 2017</time>
+              <time class="date" datetime="2025">2025 - 2026</time>
             </li>
 
             <li>
@@ -257,10 +308,10 @@
 
             <li>
               <div>
-                <h3>Formation AgenciLab : Marketing Digital</h3>
-                <p>Plateforme en ligne</p>
+                <h3>Certificat d'aptitude professionnelle Boulangerie</h3>
+                <p>Centre de formation d'apprentis Nicolas Albano à Sète</p>
               </div>
-              <time class="date" datetime="2024">2024</time>
+              <time class="date" datetime="2015">2015 - 2017</time>
             </li>
           </ul>
         </article>
@@ -275,7 +326,7 @@
                 <h3>Boulanger-Pâtissier</h3>
                 <p>Boulangerie Garcia, Au Petit Bonheur, Lidl, Poulaillon (34, 66)</p>
               </div>
-              <time class="date" datetime="2015">2015 - 2025</time>
+              <time class="date" datetime="2015">2015 - 2019</time>
             </li>
 
             <li>
@@ -296,7 +347,7 @@
           <img src="./assets/icons/github.svg" alt="GitHub" />
         </a>
       </div>
-      <time datetime="2026-07-31">Mis à jour le : 31/07/2026</time>
+      <time datetime="2026-09-23">Mis à jour le : 23/09/2026</time>
     </footer>
   </body>
 </html>
